@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>HIDDEN FLOOR LOST FIGURE</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #242323 0%, #080808 100%);
+            margin: 0;
+            padding: 0;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: rgba(34, 34, 34, 0.95);
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .header-image {
+            transition: transform 0.3s ease;
+            margin-top: 30px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .header-image:hover {
+            transform: scale(1.1);
+        }
+
+        h1 {
+            color: #6b6a6a;
+            font-size: 2.5em;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            font-family: Verdana, Geneva, sans-serif;
+        }
+
+        h2 {
+            color: #8a8787;
+            font-size: 2.5em;
+            margin: 0 0 20px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            font-family: Verdana, Geneva, sans-serif;
+        }
+
+        nav {
+            background: rgba(48, 47, 47, 0.9);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(238, 228, 228, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav li {
+            display: inline-block;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #747474;
+            font-weight: bold;
+            padding: 8px 15px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-size: 0.9em;
+        }
+
+        nav a:hover {
+            background: #68666b;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        section {
+            background: rgb(56, 55, 55);
+            margin: 30px auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(31, 30, 30, 0.1);
+            max-width: 1000px;
+            color: #a19fa3;
+        }
+
+        #about p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        #about a {
+            color: #8b878f;
+            text-decoration: none;
+        }
+
+        #about a:hover {
+            text-decoration: underline;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .about-image {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            border: 3px solid transparent;
+        }
+
+        .about-image:hover {
+            transform: scale(1.1);
+            border-color: #968c8c;
+            box-shadow: 0 5px 15px rgba(100, 104, 122, 0.4);
+        }
+
+        #hobbies ul, #goals ol, #portfolio ul {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-left: 20px;
+        }
+
+        #hobbies li, #goals li, #portfolio li {
+            padding: 8px 12px;
+            background: #222222;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        #hobbies li:hover, #goals li:hover, #portfolio li:hover {
+            background: #5f5f5f;
+            color: white;
+            transform: translateX(5px);
+        }
+
+        #portfolio a {
+            color: #8b878f;
+            text-decoration: none;
+        }
+
+        #portfolio a:hover {
+            text-decoration: underline;
+        }
+
+        .download-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #a8abb8 0%, #8b878f 100%);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .download-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(85, 86, 88, 0.4);
+        }
+
+        footer {
+            background: rgba(34, 34, 34, 0.95);
+            padding: 20px;
+            text-align: center;
+            margin-top: auto;
+            color: #6b6a6a;
+        }
+        html {
+    scroll-behavior: smooth;
+}
+
+    </style>
+</head>
+<body>
+<header>
+    <h1>HIDDEN FLOOR: LOST FIGURE</h1>
+    <h2>HIDDEN FLOOR FANMADE</h2>
+    <img class="header-image" 
+         src="https://media.discordapp.net/attachments/1441782713932709898/1441822309727076402/Symbol_2.png?ex=6923312a&is=6921dfaa&hm=060714745d67c44fe809debab80ae3f76dd7fd148ada7ef38d0b9397a5b8e36f&=&format=webp&quality=lossless&width=179&height=360"
+         alt="MAXIDA" 
+         width="200">
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#hobbies">OG</a></li>
+    <li><a href="#goals">Content</a></li>
+    <li><a href="#portfolio">Authors</a></li>
+    <li><a href="#contact">Download</a></li>
+  </ul>
+</nav>
+ 
+<main>
+<section id="about">
+    <h2>ABOUT</h2>
+  <p>Greetings and a most sincere <strong>welcome</strong> to the haunting and melancholic world of 
+    <strong>HIDDEN FLOOR: LOST FIGURE</strong>. This project is a labor of love, a deep dive into themes of grief, guilt, 
+    and the fragile specters of memory, all presented through the visceral medium of rhythm and music.</p>
+    <p><strong>HIDDEN FLOOR: LOST FIGURE</strong> is a fan-made expansion and re-imagining, 
+        built upon the foundation of the acclaimed mod, 
+        <strong><a href="https://gamebanana.com/mods/630704">HIDDEN FLOOR: NO FEAR</a></strong>. 
+        While it draws inspiration from its predecessor, it carves its own distinct path, 
+        introducing a new narrative arc and a unique aesthetic atmosphere.
+    </p>
+        <p>This modification is a character-driven experience, featuring a cast of original personas, 
+            each meticulously designed with their own visual identity and deeply integrated lore. 
+            The story you are about to witness is a personal and harrowing one, exploring the psychological aftermath of 
+            loss and the ways in which we are haunted not by ghosts, but by our own perceived failures.
+        </p>
+            <p>The journey is structured across several songs, each one a new chapter in this poignant and emotional tale. 
+                We hope you are prepared to step into the shadows and uncover what was lost.
+            </p>
+    
+    <div class="image-container">
+        <img class="about-image" 
+             src="https://media.discordapp.net/attachments/1441782713932709898/1441812545634828390/image.png?ex=69232812&is=6921d692&hm=537416638de055470d0d59e6b8872c3c463da3a8b3775d31244920c7c142bb60&=&format=webp&quality=lossless&width=627&height=567" 
+             alt="tree"> 
+    </div>
+</section>
+
+<section id="hobbies">
+    <h2>OG</h2>
+    <p>This project is inspired by the original <strong>HIDDEN FLOOR: NO FEAR</strong> mod, created by talented developers in the gaming community. The original mod received widespread acclaim for its innovative approach to horror aesthetics and unique atmospheric design.</p>
+    
+    <p>We took the core concepts and expanded on them, adding new characters, story, and gameplay elements, while maintaining the distinctive dark aesthetic that made the original so memorable.</p>
+    
+    <p>The original <strong>HIDDEN FLOOR: NO FEAR</strong> was renowned for its creepy elements and unpredictable encounters. We maintained these core principles while adding new characters, new backgrounds, and deeper character backstories.</p>
+    
+    <p>We also added new mechanics that complement the existing ones. The result is a gameplay experience that is both familiar to veterans and accessible to new players discovering the <strong>HIDDEN FLOOR</strong> universe for the first time.</p>
+    
+    <p>This fan project is our tribute to the incredible work of the original game's developers, and we hope it brings the same sense of mystery and tension that made us fall in love with <strong>HIDDEN FLOOR: NO FEAR</strong>.</p>
+</section>
+</section>
+
+<section id="goals">
+    <h2>CONTENT</h2>
+    <ul>
+        <li>New character designs and backstories</li>
+        <li>Expanded lore and world-building</li>
+        <li>Enhanced gameplay mechanics</li>
+        <li>Original soundtrack and sound design</li>
+        <li>Multiple endings based on player choices</li>
+    </ul>
+</section>
+
+<section id="portfolio">
+    <h2>Authors</h2>
+    <ul>
+        <li>Follow <a href="https://x.com/maxidamp3">Maxida</a> (director)</li>
+        <li>Follow <a href="https://x.com/S1q_ence">Siquence</a> (artist)</li>
+        <li>Follow <a href="https://x.com/Kuper0vka">Distix</a> (artist)</li>
+        <li>Follow <a href="https://t.me/PILLOWYCH">Pillowy</a> (composer)</li>
+        <li>Follow <a href="https://t.me/lexys_bro">Lexy</a> (coder)</li>
+    </ul>
+</section>
+
+<section id="contact">
+    <h2>DOWNLOAD</h2>
+    <p>The mod is currently in development. Check back soon for download links!</p>
+    <a href="#" class="download-button">Coming Soon</a>
+</section>
+</main>
+
+<footer>
+    <p>© 2025 HIDDEN FLOOR: LOST FIGURE. All rights reserved.</p>
+</footer>
+</body>
+</html>
