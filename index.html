@@ -15,12 +15,45 @@
             flex-direction: column;
         }
 
+        /* Стили для кнопки звука */
+        .sound-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(34, 34, 34, 0.9);
+            border: 2px solid #6b6a6a;
+            color: #6b6a6a;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .sound-button:hover {
+            background: rgba(107, 106, 106, 0.3);
+            transform: scale(1.1);
+            border-color: #8a8787;
+        }
+
+        .sound-button.muted {
+            background: rgba(139, 135, 143, 0.3);
+            border-color: #8b878f;
+        }
+
         header {
             background: rgba(34, 34, 34, 0.95);
             padding: 40px 20px;
             text-align: center;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             margin-bottom: 30px;
+            position: relative;
         }
 
         .header-image {
@@ -189,13 +222,25 @@
             margin-top: auto;
             color: #6b6a6a;
         }
+        
         html {
-    scroll-behavior: smooth;
-}
-
+            scroll-behavior: smooth;
+        }
     </style>
 </head>
 <body>
+    <!-- Кнопка звука -->
+    <button id="soundButton" class="sound-button" title="Включить/выключить звук">
+        🔊
+    </button>
+
+    <!-- Аудио элемент -->
+    <audio id="backgroundMusic" loop>
+        <source src="https://example.com/your-music.mp3" type="audio/mpeg">
+        <source src="https://example.com/your-music.ogg" type="audio/ogg">
+        Ваш браузер не поддерживает аудио элементы.
+    </audio>
+
 <header>
     <h1>HIDDEN FLOOR: LOST FIGURE</h1>
     <h2>HIDDEN FLOOR FANMADE</h2>
@@ -255,7 +300,6 @@
     
     <p>This fan project is our tribute to the incredible work of the original game's developers, and we hope it brings the same sense of mystery and tension that made us fall in love with <strong>HIDDEN FLOOR: NO FEAR</strong>.</p>
 </section>
-</section>
 
 <section id="goals">
     <h2>CONTENT</h2>
@@ -289,6 +333,39 @@
 <footer>
     <p>© 2025 HIDDEN FLOOR: LOST FIGURE. All rights reserved.</p>
 </footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const audio = document.getElementById('backgroundMusic');
+        const soundButton = document.getElementById('soundButton');
+        
+        
+        audio.volume = 0.5;
+        
+        
+        soundButton.addEventListener('click', function() {
+            if (audio.muted) {
+                
+                audio.muted = false;
+                soundButton.textContent = '🔊';
+                soundButton.classList.remove('muted');
+            } else {
+                
+                audio.muted = true;
+                soundButton.textContent = '🔇';
+                soundButton.classList.add('muted');
+            }
+        });
+        
+        
+        document.addEventListener('click', function initAudio() {
+            audio.play().catch(e => {
+                console.log('z');
+            });
+            
+            document.removeEventListener('click', initAudio);
+        }, { once: true });
+    });
+</script>
 </body>
 </html>
-
